@@ -1,15 +1,17 @@
+package Game;
+
 /**
- * The Card class represents a playing card with a specific rank, suit, and numerical value.
+ * The Game.Card class represents a playing card with a specific rank, suit, and numerical value.
  * It provides methods to retrieve the card's rank, suit, and value, as well as a human-readable
  * representation of the card using the toString method.
  */
-class Card {
+public class Card {
     private final String rank;  // The rank of the card (e.g., "Ace", "King", "2")
     private final String suit;  // The suit of the card (e.g., "Hearts", "Spades")
     private final int value;    // The numerical value of the card in the game
 
     /**
-     * Constructs a new Card with the specified rank, suit, and value.
+     * Constructs a new Game.Card with the specified rank, suit, and value.
      *
      * @param rank  The rank of the card (e.g., "Ace", "King", "2").
      * @param suit  The suit of the card (e.g., "Hearts", "Spades").

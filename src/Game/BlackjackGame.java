@@ -1,20 +1,22 @@
+package Game;
+
 import java.util.Scanner;
 
 /**
- * The BlackjackGame class represents a simple implementation of the Blackjack card game.
+ * The Game.BlackjackGame class represents a simple implementation of the Blackjack card game.
  * It includes methods for dealing cards, simulating the player's and dealer's turns, and determining the winner.
  */
-class BlackjackGame {
+public class BlackjackGame {
     private final Deck deck;       // The deck of cards used in the game
     private final Player player;   // The player participating in the game
     private final Player dealer;   // The dealer participating in the game
 
     /**
-     * Constructs a new BlackjackGame with a deck, player, and dealer.
+     * Constructs a new Game.BlackjackGame with a deck, player, and dealer.
      */
     public BlackjackGame() {
         deck = new Deck();          // Create a new deck of cards
-        player = new Player("Player");  // Create a player with the name "Player"
+        player = new Player("Game.Player");  // Create a player with the name "Game.Player"
         dealer = new Player("Dealer");  // Create a dealer with the name "Dealer"
     }
 
@@ -41,9 +43,9 @@ class BlackjackGame {
             System.out.print("Do you want to hit (h) or stand (s)? ");
             String choice = scanner.next().toLowerCase();  // Get the player's choice (hit or stand)
             if (choice.equals("h")) {
-                player.addCard(deck.draw());  // Player chooses to hit, so deal a card to them
+                player.addCard(deck.draw());  // Game.Player chooses to hit, so deal a card to them
             } else if (choice.equals("s")) {
-                break;  // Player chooses to stand, break the loop
+                break;  // Game.Player chooses to stand, break the loop
             } else {
                 System.out.println("Invalid choice. Please enter 'h' or 's'.");  // Invalid input
             }
@@ -63,14 +65,14 @@ class BlackjackGame {
      * Determines the winner of the game and displays the result.
      */
     public void determineWinner() {
-        System.out.println("Player's hand: " + player.getHand() + " (Score: " + player.getScore() + ")");
+        System.out.println("Game.Player's hand: " + player.getHand() + " (Score: " + player.getScore() + ")");
         System.out.println("Dealer's hand: " + dealer.getHand() + " (Score: " + dealer.getScore());
 
         // Check and compare the scores to determine the winner
         if (player.getScore() > 21 || (dealer.getScore() <= 21 && dealer.getScore() >= player.getScore())) {
             System.out.println("Dealer wins!");
         } else if (dealer.getScore() > 21 || player.getScore() > dealer.getScore()) {
-            System.out.println("Player wins!");
+            System.out.println("Game.Player wins!");
         } else {
             System.out.println("It's a tie!");
         }

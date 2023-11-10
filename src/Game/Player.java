@@ -1,16 +1,18 @@
+package Game;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The Player class represents a participant in the Blackjack game.
+ * The Game.Player class represents a participant in the Blackjack game.
  */
-class Player {
+public class Player {
     private final String name;          // The name of the player
     private final ArrayList<Card> hand; // The player's hand, which is a list of cards
     private int score;                   // The player's current score
 
     /**
-     * Constructs a new Player with the specified name and an initial score of 0.
+     * Constructs a new Game.Player with the specified name and an initial score of 0.
      *
      * @param name The name of the player.
      */

@@ -1,6 +1,8 @@
+package Main;
+import Game.*;
 /**
- * The Main class serves as the entry point to start the Blackjack game.
- * It creates an instance of the BlackjackGame class and initiates the game by calling the play method.
+ * The Main.Main class serves as the entry point to start the Blackjack game.
+ * It creates an instance of the Game.BlackjackGame class and initiates the game by calling the play method.
  */
 public class Main {
 

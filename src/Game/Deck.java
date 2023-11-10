@@ -1,16 +1,18 @@
+package Game;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 /**
- * The Deck class represents a standard deck of playing cards, consisting of various ranks and suits.
+ * The Game.Deck class represents a standard deck of playing cards, consisting of various ranks and suits.
  * It provides methods for initializing the deck, shuffling the cards, and drawing cards from the top.
  */
-class Deck {
+public class Deck {
     private List<Card> cards = new ArrayList<>();  // A list to store the cards in the deck
 
     /**
-     * Constructs a new Deck, initializing it with a standard deck of 52 cards.
+     * Constructs a new Game.Deck, initializing it with a standard deck of 52 cards.
      * Each card has a rank, suit, and a corresponding numerical value for use in card games.
      */
     public Deck() {
