@@ -2,11 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-// A class representing a deck of playing cards
+/**
+ * The Deck class represents a standard deck of playing cards, consisting of various ranks and suits.
+ * It provides methods for initializing the deck, shuffling the cards, and drawing cards from the top.
+ */
 class Deck {
     private List<Card> cards = new ArrayList<>();  // A list to store the cards in the deck
 
-    // Constructor to initialize a standard deck of 52 cards with ranks and suits
+    /**
+     * Constructs a new Deck, initializing it with a standard deck of 52 cards.
+     * Each card has a rank, suit, and a corresponding numerical value for use in card games.
+     */
     public Deck() {
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
@@ -26,7 +32,10 @@ class Deck {
         }
     }
 
-    // Shuffle the deck by randomly swapping card positions
+    /**
+     * Shuffles the deck by randomly swapping card positions.
+     * This method uses a pseudo-random number generator to achieve randomness.
+     */
     public void shuffle() {
         Random rand = new Random();
         for (int i = 0; i < cards.size(); i++) {
@@ -37,7 +46,11 @@ class Deck {
         }
     }
 
-    // Draw a card from the top of the deck and remove it from the list
+    /**
+     * Draws a card from the top of the deck and removes it from the list.
+     *
+     * @return The card drawn from the top of the deck, or null if the deck is empty.
+     */
     public Card draw() {
         if (!cards.isEmpty()) {
             return cards.remove(0);

@@ -1,41 +1,66 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// A class representing a player in the Blackjack game
+/**
+ * The Player class represents a participant in the Blackjack game.
+ */
 class Player {
-    private final String name; // The name of the player
-    private final ArrayList<Card> hand = new ArrayList<>(); // The player's hand, which is a list of cards
-    private int score; // The player's current score
+    private final String name;          // The name of the player
+    private final ArrayList<Card> hand; // The player's hand, which is a list of cards
+    private int score;                   // The player's current score
 
-    // Constructor to create a player with a given name and an initial score of 0
+    /**
+     * Constructs a new Player with the specified name and an initial score of 0.
+     *
+     * @param name The name of the player.
+     */
     public Player(String name) {
         this.name = name;
         this.score = 0;
+        this.hand = new ArrayList<>();
     }
 
-    // Method to add a card to the player's hand and update their score
+    /**
+     * Adds a card to the player's hand and updates their score.
+     *
+     * @param card The card to be added to the player's hand.
+     */
     public void addCard(Card card) {
         hand.add(card);
         score += card.getValue();
     }
 
-    // Getter method to get the player's current score
+    /**
+     * Returns the player's current score.
+     *
+     * @return The player's current score.
+     */
     public int getScore() {
         return score;
     }
 
-    // Getter method to retrieve the player's hand of cards
+    /**
+     * Returns the player's hand of cards.
+     *
+     * @return A list of cards representing the player's hand.
+     */
     public List<Card> getHand() {
         return hand;
     }
 
-    // Method to clear the player's hand and reset their score
+    /**
+     * Clears the player's hand and resets their score to 0.
+     */
     public void clearHand() {
         hand.clear();
         score = 0;
     }
 
-    // Getter method to get the name of the player
+    /**
+     * Returns the name of the player.
+     *
+     * @return The name of the player.
+     */
     public String getName() {
         return name;
     }
